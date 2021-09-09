@@ -112,7 +112,6 @@ public class GameManger : MonoBehaviour
                 {
                     winner = "Player 02";
                 }
-                Debug.Log(winner);
                 hasWinner = true;
             }
         }
@@ -134,11 +133,11 @@ public class GameManger : MonoBehaviour
 
         if (hasWinner)
         {
-            winningPanel.transform.Find("Title").GetComponent<Text>().text = "Congradulations!";
+            winningPanel.transform.Find("Title").GetComponent<Text>().text = "Congratulations!";
             winningPanel.transform.Find("Winner").GetComponent<Text>().text = winner + " wins!";
             if (!isPlayingDone)
             {
-                SoundManager._instance.CongradsSoundPlay();
+                SoundManager._instance.CongratsSoundPlay();
                 isPlayingDone = true;
             }
                 

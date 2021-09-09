@@ -13,6 +13,8 @@ public class ClickEvents : MonoBehaviour
     public GameObject musicIcon;
     private bool hasMusic = true;
 
+    private string player01Letter, player02Letter;
+
     public void GetLetter()
     {
         GameObject letterObject = EventSystem.current.currentSelectedGameObject;
@@ -21,6 +23,7 @@ public class ClickEvents : MonoBehaviour
         if (!GameManger._instance.isPlayer2toChoose)
         {
             //if its player01 turn
+            player01Letter = letterObject.name;
             letterObject.transform.SetParent(player01.transform);
             letterObject.transform.localPosition = new Vector3(player01.transform.position.x + 180, 0,0);
             GameManger._instance.player01 = GameObject.Instantiate(letterObject);
@@ -29,12 +32,13 @@ public class ClickEvents : MonoBehaviour
         else
         {
             //if its player02 turn
+            player02Letter = letterObject.name;
             letterObject.transform.SetParent(player02.transform);
             letterObject.transform.localPosition = new Vector3(player02.transform.position.x + 120, 0, 0);
             GameManger._instance.player02 = GameObject.Instantiate(letterObject);
             GameManger._instance.player02Ready = true;
         }
-
+        SoundManager._instance.LetterSoundPlay(letterObject.name);
         GameManger._instance.isPlayer2toChoose = !GameManger._instance.isPlayer2toChoose;
     }
 
@@ -49,16 +53,19 @@ public class ClickEvents : MonoBehaviour
             currentCell.GetComponent<Image>().SetNativeSize();
             GameManger._instance.player01Outline.SetActive(false);
             GameManger._instance.player02Outline.SetActive(true);
+            SoundManager._instance.LetterSoundPlay(player01Letter);
         }
         else
         {
             // player02 is to go
-            // player01 is to go
             currentCell.GetComponent<Image>().sprite = GameManger._instance.player02.GetComponent<Image>().sprite;
             currentCell.GetComponent<Image>().SetNativeSize();
             GameManger._instance.player01Outline.SetActive(true);
             GameManger._instance.player02Outline.SetActive(false);
+            SoundManager._instance.LetterSoundPlay(player02Letter);
         }
+
+        
         currentCell.GetComponent<Button>().enabled = false;
         GameManger._instance.player02Go = !GameManger._instance.player02Go;
     }

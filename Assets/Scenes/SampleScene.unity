@@ -178,7 +178,6 @@ MonoBehaviour:
   player02Go: 0
   bgGrey: {fileID: 560858162}
   winningPanel: {fileID: 95492014}
-  congradsClip: {fileID: 8300000, guid: cc48a2ee8f01548b396a60228ebc131b, type: 3}
 --- !u!1 &51145746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,7 +1959,7 @@ GameObject:
   - component: {fileID: 408689328}
   - component: {fileID: 408689327}
   m_Layer: 5
-  m_Name: text
+  m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5643,6 +5642,38 @@ MonoBehaviour:
   clickClip: {fileID: 8300000, guid: e57ca60faa5054ca4965accfbcd8f957, type: 3}
   congradsClip: {fileID: 8300000, guid: cc48a2ee8f01548b396a60228ebc131b, type: 3}
   tryAgainClip: {fileID: 8300000, guid: 05ed31b9b6dbe4a238bf2e7189f280eb, type: 3}
+  allLettersSound:
+  - {fileID: 8300000, guid: cf6765d18ba4544a6916dd320bdc9259, type: 3}
+  - {fileID: 8300000, guid: 2a31499f831a949e3ae7fca1ed638794, type: 3}
+  - {fileID: 8300000, guid: d2616d28779c8429ba8edb23e8449e77, type: 3}
+  - {fileID: 8300000, guid: 05f66795e571046fb82af382f101c4ce, type: 3}
+  - {fileID: 8300000, guid: 930ac2ab63c5147ba90518d21765b359, type: 3}
+  - {fileID: 8300000, guid: a7634e70843a8496686f002698543860, type: 3}
+  - {fileID: 8300000, guid: 69aa2f8bb465e43e3819998debfc0856, type: 3}
+  - {fileID: 8300000, guid: a147864331f26421a9bbd1ae01dfcb2f, type: 3}
+  - {fileID: 8300000, guid: bd507528e54e04635bf8380c3df15942, type: 3}
+  - {fileID: 8300000, guid: 28d4ad9e165b5460187f57557380c353, type: 3}
+  - {fileID: 8300000, guid: 548a6c458cc3e45819934483910c2b7f, type: 3}
+  - {fileID: 8300000, guid: 928c74efecb86436ba91aced57dda115, type: 3}
+  - {fileID: 8300000, guid: 05430845ab14a4e6a86faab438845c2d, type: 3}
+  - {fileID: 8300000, guid: ba031313bf0f14c54a07df1388fb4eef, type: 3}
+  - {fileID: 8300000, guid: 5fcd1656d948d474791b9f0c9b0d156a, type: 3}
+  - {fileID: 8300000, guid: 29d77d9676365464f94f1825d4f35570, type: 3}
+  - {fileID: 8300000, guid: 1e7da43591e7f406f9e778a97492c57c, type: 3}
+  - {fileID: 8300000, guid: 711c0c349b11044428aa7fb686bebbe2, type: 3}
+  - {fileID: 8300000, guid: d993a24c6946743adb580b26af61139d, type: 3}
+  - {fileID: 8300000, guid: 0375009317b454692936687a824f0cdf, type: 3}
+  - {fileID: 8300000, guid: 110c6f2b7d3c843b0b6baba7568099ce, type: 3}
+  - {fileID: 8300000, guid: fe1fd48bf4fa94bc6b808e025c99f148, type: 3}
+  - {fileID: 8300000, guid: 1cc1dcaeddc074e168570e053094cfc5, type: 3}
+  - {fileID: 8300000, guid: cb63b1bf435db46cdb84fdb24cc5128d, type: 3}
+  - {fileID: 8300000, guid: 6389b7f2ab45243bf95199cd4f6fc934, type: 3}
+  - {fileID: 8300000, guid: da5adaf0d613741febbc19199b2adb57, type: 3}
+  - {fileID: 8300000, guid: cfc8b7e2004184eb8a74f76bea7797ca, type: 3}
+  - {fileID: 8300000, guid: 2edc6936cbc0544bfb650980b13d59ed, type: 3}
+  - {fileID: 8300000, guid: 4373007110f234886b71cc3d11cc1b30, type: 3}
+  - {fileID: 8300000, guid: 3cf29913db04c4d1a8bf66f3ebeabb38, type: 3}
+  - {fileID: 8300000, guid: c19bf4917df1a436f8aadac0f96618e3, type: 3}
 --- !u!82 &1373725445
 AudioSource:
   m_ObjectHideFlags: 0

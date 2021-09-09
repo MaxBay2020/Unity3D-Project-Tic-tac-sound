@@ -6,6 +6,7 @@ public class SoundManager : MonoBehaviour
 {
     public AudioClip clickClip, congradsClip, tryAgainClip;
     private AudioSource audioSource;
+    public AudioClip[] allLettersSound;
 
     public static SoundManager _instance;
     private void Awake()
@@ -23,7 +24,7 @@ public class SoundManager : MonoBehaviour
         audioSource.PlayOneShot(clickClip);
     }
 
-    public void CongradsSoundPlay()
+    public void CongratsSoundPlay()
     {
         if (!audioSource.isPlaying)
             audioSource.PlayOneShot(congradsClip);
@@ -33,5 +34,17 @@ public class SoundManager : MonoBehaviour
     {
         if (!audioSource.isPlaying)
             audioSource.PlayOneShot(tryAgainClip);
+    }
+
+    public void LetterSoundPlay(string whichLetter)
+    {
+        foreach (var eachLetterClip in allLettersSound)
+        {
+            if (eachLetterClip.name.Equals(whichLetter))
+            {
+                audioSource.PlayOneShot(eachLetterClip);
+                break;
+            }
+        }
     }
 }
