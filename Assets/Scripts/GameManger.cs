@@ -11,6 +11,7 @@ public class GameManger : MonoBehaviour
     public bool player02Ready;
     public GameObject letterBoard;
     public GameObject gameBoard;
+    public GameObject instructionText;
     public GameObject player01, player02;
     public GameObject player01Outline, player02Outline;
     public bool player02Go;
@@ -35,6 +36,7 @@ public class GameManger : MonoBehaviour
 
         letterBoard.SetActive(!(player01Ready && player02Ready));
         gameBoard.SetActive(player01Ready && player02Ready);
+        instructionText.SetActive(!gameBoard.activeSelf);
         player01Outline.SetActive(player01Ready && player02Ready);
         if (player02Go)
         {
@@ -105,12 +107,12 @@ public class GameManger : MonoBehaviour
             {
                 if (cells[i].GetComponent<Image>().sprite.name == player01SpriteName)
                 {
-                    winner="Player 01";
+                    winner="Player 1";
                     
                 }
                 else
                 {
-                    winner = "Player 02";
+                    winner = "Player 2";
                 }
                 hasWinner = true;
             }
