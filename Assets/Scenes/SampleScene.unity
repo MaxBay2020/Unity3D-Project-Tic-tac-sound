@@ -179,6 +179,7 @@ MonoBehaviour:
   player02Go: 0
   bgGrey: {fileID: 560858162}
   winningPanel: {fileID: 95492014}
+  instructionAudioDone: 0
 --- !u!1 &51145746
 GameObject:
   m_ObjectHideFlags: 0
@@ -4605,7 +4606,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 61a7d78e1891f4695811482f45909fe2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5675,6 +5676,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4373007110f234886b71cc3d11cc1b30, type: 3}
   - {fileID: 8300000, guid: 3cf29913db04c4d1a8bf66f3ebeabb38, type: 3}
   - {fileID: 8300000, guid: c19bf4917df1a436f8aadac0f96618e3, type: 3}
+  placeACoinInTheFreeSpace: {fileID: 8300000, guid: 0b3fe714707744ab4a5027b9001d5089, type: 3}
 --- !u!82 &1373725445
 AudioSource:
   m_ObjectHideFlags: 0

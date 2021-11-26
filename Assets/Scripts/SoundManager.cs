@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip clickClip, congradsClip, tryAgainClip;
     private AudioSource audioSource;
     public AudioClip[] allLettersSound;
+    public AudioClip placeACoinInTheFreeSpace;
 
     public static SoundManager _instance;
     private void Awake()
@@ -46,5 +47,9 @@ public class SoundManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void PlayInstructionSound(){
+        audioSource.PlayOneShot(placeACoinInTheFreeSpace);
     }
 }

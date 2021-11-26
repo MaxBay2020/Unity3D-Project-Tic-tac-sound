@@ -23,6 +23,7 @@ public class GameManger : MonoBehaviour
     private string winner;
 
     private bool isPlayingDone;
+    public bool instructionAudioDone;
 
     private void Awake()
     {
@@ -36,6 +37,12 @@ public class GameManger : MonoBehaviour
 
         letterBoard.SetActive(!(player01Ready && player02Ready));
         gameBoard.SetActive(player01Ready && player02Ready);
+        // play instruction audio
+        if(gameBoard.activeSelf && !instructionAudioDone){
+            SoundManager._instance.PlayInstructionSound();
+            instructionAudioDone=true;
+        }
+
         instructionText.SetActive(!gameBoard.activeSelf);
         player01Outline.SetActive(player01Ready && player02Ready);
         if (player02Go)
